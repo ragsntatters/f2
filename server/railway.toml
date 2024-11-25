@@ -1,0 +1,13 @@
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+healthcheckPath = "/api/health"
+healthcheckTimeout = 300
+restartPolicy = "ON_FAILURE"
+startCommand = "npm start"
+
+[service]
+internal_port = 3001
+autoDeploy = true
